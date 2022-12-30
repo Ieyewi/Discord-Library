@@ -1,0 +1,55 @@
+--[[ Loadstring ]]
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+--[[ Window ]]
+local win = DiscordLib:Window("DiscordLib")
+
+--[[ Tab ]]
+local serv = win:Server("Roblox Scripting", "")
+
+--[[ Button ]]
+btns:Button("Kill all", function()
+print()
+
+--[[ Notification ]]
+DiscordLib:Notification("Tittle", "Message", "Option")
+end)
+
+--[[ Seperator ]]
+btns:Seperator()
+
+--[[ Toogle ]]
+tgls:Toggle("Toogle",false, function(bool)
+print(bool)
+end)
+
+--[[ Slider ]]
+local sldr = sldrs:Slider("Slide me!", 0, 1000, 400, function(t)
+print(t)
+end)
+
+--[[ Dropdown ]]
+local drop = drops:Dropdown("Pick me!",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(bool)
+print(bool)
+end)
+
+--[[ Colorpicker ]]
+clrs:Colorpicker("ESP Color", Color3.fromRGB(255,1,1), function(t)
+print(t)
+end)
+
+--[[ Textbox ]]
+textbs:Textbox("Tittle", "Type here!", true, function(t)
+print(t)
+end)
+
+--[[ Label ]]
+lbls:Label("Label")
+
+--[[ Bind ]]
+bnds:Bind("bind", Enum.KeyCode.RightShift, function()
+print("BIND")
+end)
+
+--[[ Main ]]
+win:Server("IOIOIOI", "http://www.roblox.com/asset/?id=6031075938")
